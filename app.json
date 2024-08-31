@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "weather-x",
+    "name": "WeatherX",
     "slug": "weather-x",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -9,28 +9,43 @@
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "resizeMode": "fill",
+      "backgroundColor": "#0200a8"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.subhadeep3902.weatherx"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.subhadeep3902.weatherx"
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/icon.png"
     },
     "plugins": [
-      "expo-router"
+      [
+        "expo-router",
+        {
+          "origin": "https://weatherx.com/"
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": "https://weatherx.com/"
+      },
+      "eas": {
+        "projectId": "8171efab-5cae-480e-a536-6e9e5f02868e"
+      }
     }
   }
 }
